@@ -1,0 +1,40 @@
+<?xml version="1.0"  encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="broadleafcommercePOC" parallel="methods">
+
+
+
+	<parameter name="requestId" value="123" />
+	<parameter name="reportPath" value="E:\Reports\" />
+	<parameter name="Environment"
+		value="http://rammohanbsoft:d113320a-03fc-41e8-a94f-68ea3a74c505@ondemand.saucelabs.com:80/wd/hub" />
+	<parameter name="ApplicationToTest"
+		value="http://demo.broadleafcommerce.org/" />
+	<parameter name="ExecutionType" value="Parallel" />
+	<parameter name="recordVideo" value="true" />
+	<parameter name="captureImage" value="false" />
+	<!-- <parameter name="gridURL" value="MYURL" /> -->
+
+
+	<test name="GuestCheckOut_Test" preserve-order="true"> 
+	    <parameter name="browser" value="FIREFOX" /> 
+		<parameter name="browserVersion" value="25" />
+		<parameter name="os" value="WINDOWS 7" /> 
+		<parameter name="dataSource" value="test-data//TestData.xls" />		
+		<classes>
+   			<class name="Test.GuestCheckout"></class>
+  		</classes>
+	</test>
+	
+	<!-- <test name="GuestCheckOut_Test" preserve-order="true"> 
+	    <parameter name="browser" value="SAFARI" /> 
+		<parameter name="browserVersion" value="8" />
+		<parameter name="os" value="" /> 
+		<parameter name="dataSource" value="test-data//TestData.xls" />		
+		<classes>
+   			<class name="Test.GuestCheckout"></class>
+  		</classes>
+	</test> -->
+
+
+</suite>	 	

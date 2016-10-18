@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="BrowseProductAndAddToCartTest_FIREFOX_25"
+           tests="1"
+           failures="0"
+           errors="0"
+           skipped="0"
+           time="290.252">
+  <properties />
+  
+  
+            <testcase name="Checkout_As_Reg_User" time="290.252" classname="Test.RegUserCheckOut" />
+      
+</testsuite>

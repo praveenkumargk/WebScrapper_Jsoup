@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [Suite]" parallel="tests">
+  <parameter name="searchKeyword" value="blender"/>
+  <test name="Test(failed)" parallel="tests" preserve-order="true">
+    <parameter name="searchKeyword" value="blender"/>
+    <classes>
+      <class name="Test.MainClass">
+        <methods>
+          <include name="JobDetailsScrapper" invocation-numbers="0"/>
+        </methods>
+      </class> <!-- Test.MainClass -->
+    </classes>
+  </test> <!-- Test(failed) -->
+</suite> <!-- Failed suite [Suite] -->

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="LoginLogutTest_Safari"
+           tests="1"
+           failures="0"
+           errors="0"
+           skipped="0"
+           time="62.363">
+  <properties />
+  
+  
+            <testcase name="LoginLogut_Test" time="62.363" classname="Test.LoginLogutTest" />
+      
+</testsuite>

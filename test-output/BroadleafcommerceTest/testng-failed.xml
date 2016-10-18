@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [BroadleafcommerceTest]" parallel="tests">
+  <parameter name="Environment" value="http://sairamv:640297d9-6223-434e-87aa-6ef682405c1c@ondemand.saucelabs.com:80/wd/hub"/>
+  <parameter name="os" value="OS X 10.10"/>
+  <parameter name="ApplicationToTest" value="https://demo.broadleafcommerce.org"/>
+  <parameter name="dataSource" value="null"/>
+  <parameter name="browserVersion" value="8"/>
+  <parameter name="captureImage" value="true"/>
+  <parameter name="requestId" value="123"/>
+  <parameter name="browser" value="SAFARI"/>
+  <parameter name="ExecutionType" value="Parallel"/>
+  <parameter name="reportPath" value="E:\Reports\"/>
+  <parameter name="recordVideo" value="true"/>
+  <test name="LoginLogutTest_Safari(failed)" parallel="tests">
+    <parameter name="os" value="OS X 10.10"/>
+    <parameter name="dataSource" value="null"/>
+    <parameter name="browserVersion" value="8"/>
+    <parameter name="browser" value="SAFARI"/>
+    <classes>
+      <class name="Test.LoginLogutTest">
+        <methods>
+          <include name="LoginLogut_Test"/>
+          <include name="ClearExistingAndSetupFolder"/>
+          <include name="SendReport"/>
+        </methods>
+      </class> <!-- Test.LoginLogutTest -->
+      <class name="Test.SearchProductAndAddToCartTest">
+        <methods>
+          <include name="SearchProductAndAddToCart_Test"/>
+        </methods>
+      </class> <!-- Test.SearchProductAndAddToCartTest -->
+      <class name="Test.GuestCheckout">
+        <methods>
+          <include name="Checkout_As_Guest"/>
+        </methods>
+      </class> <!-- Test.GuestCheckout -->
+      <class name="Test.RegUserCheckOut">
+        <methods>
+          <include name="Checkout_As_Reg_User"/>
+        </methods>
+      </class> <!-- Test.RegUserCheckOut -->
+      <class name="Test.RegistrationTest">
+        <methods>
+          <include name="Registration_Test"/>
+        </methods>
+      </class> <!-- Test.RegistrationTest -->
+      <class name="Test.BrowseProductAndAddToCartTest">
+        <methods>
+          <include name="BrowseProductAndAddToCart_Test"/>
+        </methods>
+      </class> <!-- Test.BrowseProductAndAddToCartTest -->
+    </classes>
+  </test> <!-- LoginLogutTest_Safari(failed) -->
+</suite> <!-- Failed suite [BroadleafcommerceTest] -->

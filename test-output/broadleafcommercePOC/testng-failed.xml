@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [broadleafcommercePOC]" parallel="methods">
+  <parameter name="Environment" value="http://localhost:4444/wd/hub"/>
+  <parameter name="os" value="WINDOWS 7"/>
+  <parameter name="ApplicationToTest" value="http://demo.broadleafcommerce.org/"/>
+  <parameter name="dataSource" value="test-data//TestData.xls"/>
+  <parameter name="browserVersion" value="25"/>
+  <parameter name="captureImage" value="false"/>
+  <parameter name="requestId" value="123"/>
+  <parameter name="browser" value="FIREFOX"/>
+  <parameter name="ExecutionType" value="Parallel"/>
+  <parameter name="reportPath" value="E:\Reports\"/>
+  <parameter name="recordVideo" value="true"/>
+  <test name="GuestCheckOut_Test(failed)" parallel="methods">
+    <parameter name="os" value="WINDOWS 7"/>
+    <parameter name="dataSource" value="test-data//TestData.xls"/>
+    <parameter name="browserVersion" value="25"/>
+    <parameter name="browser" value="FIREFOX"/>
+    <classes>
+      <class name="Test.GuestCheckout">
+        <methods>
+          <include name="Checkout_As_Guest" invocation-numbers="0"/>
+          <include name="tearDown"/>
+          <include name="ClearExistingAndSetupFolder"/>
+          <include name="SendReport"/>
+          <include name="BeforeTest"/>
+        </methods>
+      </class> <!-- Test.GuestCheckout -->
+    </classes>
+  </test> <!-- GuestCheckOut_Test(failed) -->
+</suite> <!-- Failed suite [broadleafcommercePOC] -->
