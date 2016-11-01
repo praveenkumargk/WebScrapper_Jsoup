@@ -21,6 +21,7 @@ import org.testng.annotations.Test;
 
 import CareerBuilderdotcom.CareerBuilderScrapper;
 import Dicedotcom.DiceScrapper;
+import Indeeddotcom.IndeedScrapper;
 import Monsterdotcom.MonsterScrapper;
 
 public class MainClass {
@@ -35,7 +36,7 @@ public class MainClass {
 		String Dice = System.getenv("Dice.com");
 		String careerBuilder = System.getenv("CareerBuilder.com");
 		String monster = System.getenv("Monster.com");
-
+		String indeed = System.getenv("Indeed.com");
 		try {
 			if (!searchKeyword1.equalsIgnoreCase("null")) {
 				searchKeyword = System.getenv("SEARCH_KEYWORD");
@@ -65,6 +66,7 @@ public class MainClass {
 		// career.start();
 		MonsterScrapper mons = new MonsterScrapper(searchKeyword, location);
 		// mons.start();
+		IndeedScrapper indy = new IndeedScrapper(searchKeyword, location);
 
 		if (Dice.equalsIgnoreCase("true")) {
 			dice.start();
@@ -75,6 +77,9 @@ public class MainClass {
 		if (monster.equalsIgnoreCase("true")) {
 			mons.start();
 		}
+		if (indeed.equalsIgnoreCase("true")) {
+			indy.start();
+		}
 
 		/**
 		 * 
@@ -82,7 +87,8 @@ public class MainClass {
 		 * 
 		 */
 
-		while ((dice.isAlive()) || (career.isAlive()) || (mons.isAlive())) {
+		while ((dice.isAlive()) || (career.isAlive()) || (mons.isAlive())
+				|| (indy.isAlive())) {
 
 		}
 

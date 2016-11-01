@@ -14,7 +14,6 @@ import org.jsoup.HttpStatusException;
 import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
 import org.jsoup.select.Elements;
-import org.openqa.selenium.By;
 import org.openqa.selenium.Dimension;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
@@ -23,7 +22,6 @@ import org.openqa.selenium.phantomjs.PhantomJSDriver;
 import org.openqa.selenium.phantomjs.PhantomJSDriverService;
 import org.openqa.selenium.remote.Augmenter;
 import org.openqa.selenium.remote.DesiredCapabilities;
-import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 public class MonsterScrapper extends Thread {
@@ -123,14 +121,6 @@ public class MonsterScrapper extends Thread {
 		while (b) {
 			// for (int s = 26; s < 28; s++) {
 			System.out.println("Monster.com job detail received");
-			try {
-
-				wait.until(ExpectedConditions.presenceOfElementLocated(By
-						.cssSelector("div.jsresultsheader > h2")));
-
-			} catch (Exception t) {
-				t.printStackTrace();
-			}
 			try {
 				url = "http://jobs.monster.com/search/?q=" + searchKey
 						+ "&where=" + Location + "&page=" + (pagenumber);
